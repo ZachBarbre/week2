@@ -1,6 +1,6 @@
-class Person:
+class Person(object):
     species = "Homo Sapien"
-    def __init__(self, name, email, phone):
+    def __init__(self, name, email='no email', phone='no phone'):
         self.name = name 
         self.email = email
         self.phone = phone
@@ -11,7 +11,7 @@ class Person:
     def __str__(self):
         return f"Person: {self.name} {self.email} {self.phone}"
 
-    def greet(self, other_person): # other_person must be a class intance 
+    def greet(self, other_person): # other_person must be a class instance with name attribute
         print(f"Hello {other_person.name}, I am {self.name}.")
         self.greeting_count += 1
         if other_person not in self.person_greeted:
@@ -32,7 +32,8 @@ class Person:
 
 sonny = Person('Sonny', 'sonny@hotmail.com', '483-485-4948')
 jordan = Person('Jordan', 'jordan@aol.com', '495-586-3456')
-dee_ann = Person('Dee Ann', 'dee-ann@gmail.com', '555-555-5550')
+# dee_ann = Person('Dee Ann', 'dee-ann@gmail.com', '555-555-5550')
+dee_ann = Person('Dee Ann')
 
 sonny.greet(jordan)
 sonny.num_unique_people_greeted()
@@ -54,4 +55,3 @@ class Vehicle:
 
 leaf = Vehicle('Nissan', 'Leaf', 2015)
 # leaf.print_info()
-

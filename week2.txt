@@ -15,3 +15,8 @@ Class:
     defines the constructor
     Specifies what attributes instances have
     contains the defintions of the methods 
+
+OOP
+    goal is to build a system with:
+        specific roles
+        rules of how they interact 
